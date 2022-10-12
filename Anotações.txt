@@ -22,3 +22,5 @@ A sintaxe dos métodos dentro dos casos de teste deve ser (em snake case):
 
 Histórias de usuário são formas de estruturar o teste, simulando as 
 ações do usuário.
+
+O objeto RequestFactory abstrai as requisições para as views do Django.
