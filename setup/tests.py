@@ -2,6 +2,7 @@ from os import curdir, path, sep
 from django.test import LiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import time
 
 class AnimaisTestCase(LiveServerTestCase):
     def setUp(self) -> None:
@@ -33,6 +34,9 @@ class AnimaisTestCase(LiveServerTestCase):
         self.assertEqual(buscar_animal_input.get_attribute('placeholder'), 'Exemplo: leão')
 
         # Ele pesquisa por Leão e clica no botão Pesquisar.
+        buscar_animal_input.send_keys('leão') # Insere o valor "leão" no campo buscar_animal_input.
+        self.browser.find_element(By.CSS_SELECTOR, 'form button').click()
+        time.sleep(2)
 
         # O site exibe 4 características do animal pesquisado.
 

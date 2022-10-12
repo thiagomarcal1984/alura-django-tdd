@@ -31,3 +31,13 @@ TestCase.assertTemplateUsed() verifica se um template está sendo usado. Nesse
 context manager, verificamos se o retorno da requisição HTTP é 200.
 
 A busca pelo seletor CSS input#busca-animal é igual à pelo id busca-animal.
+
+O método send_keys está presente nos inputs recuperados pelo Selenium, e serve
+para "escrever" conteúdo nesses campos.
+
+É possível "clicar" em botões, recuperando-os e acionando o método de clique:
+    self.browser.find_element(By.CSS_SELECTOR, 'form button').click()
+
+Para que o browser "espere" por algum tempo, use a biblioteca time do Python:
+    import time
+    time.sleep(2) # Dois segundos de espera.
