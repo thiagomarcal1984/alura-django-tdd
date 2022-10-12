@@ -28,6 +28,9 @@ class AnimaisTestCase(LiveServerTestCase):
         self.assertEqual('Busca Animal', brand_element.text)
 
         # Ele vê um campo para pesquisar animais pelo nome.
+        # buscar_animal_input = self.browser.find_element(By.CSS_SELECTOR, 'input#buscar-animal')
+        buscar_animal_input = self.browser.find_element(By.ID, 'buscar-animal')
+        self.assertEqual(buscar_animal_input.get_attribute('placeholder'), 'Exemplo: leão')
 
         # Ele pesquisa por Leão e clica no botão Pesquisar.
 

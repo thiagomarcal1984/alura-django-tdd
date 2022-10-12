@@ -29,3 +29,5 @@ A cláusula with serve para realizar comandos dentro de um context manager.
 
 TestCase.assertTemplateUsed() verifica se um template está sendo usado. Nesse
 context manager, verificamos se o retorno da requisição HTTP é 200.
+
+A busca pelo seletor CSS input#busca-animal é igual à pelo id busca-animal.
