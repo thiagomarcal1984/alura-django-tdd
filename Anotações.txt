@@ -44,3 +44,7 @@ Para que o browser "espere" por algum tempo, use a biblioteca time do Python:
 
 Perceba que o objeto browser tem dois métodos find_element: um no singular e
 outro no plural.
+
+O cliente que está nas filhas de django.test.TestCase são diferentes do 
+browser que está nas filhas de django.test.LiveServerTestCase. As filhas de 
+LiveServerTestCase podem receber o browser da biblioteca Selenium.
