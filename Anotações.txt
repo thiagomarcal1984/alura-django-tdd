@@ -1,0 +1,5 @@
+Classes que estendem de LiveServerTestCase possuem alguns métodos usados para
+configurar o ambiente de teste (como o método setUp).
+
+O webdriver que vem com o Selenium embute o navegador Safari. Mas 
+precisaríamos de usar o Google Chrome.
