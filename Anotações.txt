@@ -24,3 +24,8 @@ Histórias de usuário são formas de estruturar o teste, simulando as
 ações do usuário.
 
 O objeto RequestFactory abstrai as requisições para as views do Django.
+
+A cláusula with serve para realizar comandos dentro de um context manager.
+
+TestCase.assertTemplateUsed() verifica se um template está sendo usado. Nesse
+context manager, verificamos se o retorno da requisição HTTP é 200.
