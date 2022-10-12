@@ -4,10 +4,18 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
+from animais.models import Animal
+
 class AnimaisTestCase(LiveServerTestCase):
     def setUp(self) -> None:
         driver = "chromedriver.exe"
         self.browser = webdriver.Chrome(f"{path.abspath(curdir)}{sep}{driver}")
+        animal = Animal.objects.create(
+            nome_animal = 'Leão',
+            predador = 'Sim',
+            venenoso = 'Não',
+            domestico = 'Não',
+        )
 
     def tearDown(self) -> None:
         self.browser.quit()
