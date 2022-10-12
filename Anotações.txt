@@ -19,3 +19,6 @@ O comando abaixo procura todos os casos de teste dentro do projeto Django:
 A sintaxe dos métodos dentro dos casos de teste deve ser (em snake case):
     test_{nome_do_metodo}(self):
         # comandos do método...
+
+Histórias de usuário são formas de estruturar o teste, simulando as 
+ações do usuário.
