@@ -12,3 +12,10 @@ https://chromedriver.chromium.org/downloads
 
 O método tearDown da filha de LiveServerTestCase serve para liberar recursos,
 por exemplo fechando o navegador.
+
+O comando abaixo procura todos os casos de teste dentro do projeto Django:
+    python manage.py test
+
+A sintaxe dos métodos dentro dos casos de teste deve ser (em snake case):
+    test_{nome_do_metodo}(self):
+        # comandos do método...
