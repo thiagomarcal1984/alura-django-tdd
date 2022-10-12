@@ -1,6 +1,7 @@
 from os import curdir, path, sep
 from django.test import LiveServerTestCase
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 class AnimaisTestCase(LiveServerTestCase):
     def setUp(self) -> None:
@@ -13,21 +14,18 @@ class AnimaisTestCase(LiveServerTestCase):
     # def test_para_verificar_se_a_janela_ok(self):
     #     self.browser.get("http://www.google.com.br") # Busca URL externa.
 
-    def test_abre_janela_do_chrome(self):
-        self.browser.get(self.live_server_url) # Retorna URL do Django Server.
-
-    def test_deu_ruim(self):
-        """Teste de exemplo de erro."""
-        self.fail("Teste falhou.")
-
     def test_buscando_um_novo_animal(self):
         """
         Teste se um usuário encontra um animal pesquisando.
         """
         # Vini deseja encontrar um novo animal para adotar.
 
-        # Ele encontra o Busca Animal e decide usar o site, 
+        # Ele encontra o Busca Animal e decide usar o site,
+        home_page = self.browser.get(self.live_server_url + '/') # A barra serve para dar semântica à URL.
         # porque ele vê no menu do site escrito Busca Animal.
+        brand_element = self.browser.find_element(By.CSS_SELECTOR, '.navbar')
+        # brand_element = self.browser.find_element_by_css_selector('.navbar') # Comando antigo do Selenium.
+        self.assertEqual('Busca Animal', brand_element.text)
 
         # Ele vê um campo para pesquisar animais pelo nome.
 
