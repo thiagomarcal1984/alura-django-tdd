@@ -3,3 +3,12 @@ configurar o ambiente de teste (como o método setUp).
 
 O webdriver que vem com o Selenium embute o navegador Safari. Mas 
 precisaríamos de usar o Google Chrome.
+
+O site do Selenium possui uma lista de links para os drivers do Selenium de
+vários navegadores. O do Google Chrome é este: 
+
+https://chromedriver.chromium.org/downloads
+
+
+O método tearDown da filha de LiveServerTestCase serve para liberar recursos,
+por exemplo fechando o navegador.
