@@ -48,3 +48,6 @@ outro no plural.
 O cliente que está nas filhas de django.test.TestCase são diferentes do 
 browser que está nas filhas de django.test.LiveServerTestCase. As filhas de 
 LiveServerTestCase podem receber o browser da biblioteca Selenium.
+
+Para popular o banco de dados com os dados do arquivo lista_animais.py, use:
+    python lista_animais.py
